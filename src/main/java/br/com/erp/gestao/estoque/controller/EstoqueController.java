@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/estoque")
 public class EstoqueController {
@@ -54,5 +56,10 @@ public class EstoqueController {
         dto.setQuantidadeEstoque(p.getQuantidadeEstoque());
         dto.setPrecoUnitario(p.getPrecoUnitario());
         return dto;
+    }
+    @PostMapping("/lote")
+    public ResponseEntity<String> cadastrarEmLote(@Valid @RequestBody List<ProdutoDTO> listaDto) {
+        int totalCadastrado = service.cadastrarEmLote(listaDto);
+        return ResponseEntity.ok(totalCadastrado + " produtos cadastrados com sucesso!");
     }
 }

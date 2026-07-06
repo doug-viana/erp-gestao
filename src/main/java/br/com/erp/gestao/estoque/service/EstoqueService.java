@@ -58,4 +58,17 @@ public class EstoqueService {
         dto.setPrecoUnitario(produto.getPrecoUnitario());
         return dto;
     }
+    @Transactional
+    public int cadastrarEmLote(List<ProdutoDTO> listaDto) {
+        int contador = 0;
+        for (ProdutoDTO dto : listaDto) {
+            Produto produto = new Produto();
+            produto.setNome(dto.getNome());
+            produto.setQuantidadeEstoque(dto.getQuantidadeEstoque());
+            produto.setPrecoUnitario(dto.getPrecoUnitario());
+            repository.save(produto);
+            contador++;
+        }
+        return contador; // Retorna o número real de produtos salvos
+    }
 }
