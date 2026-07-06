@@ -1,7 +1,7 @@
 Java Enterprise ERP Core
 Este projeto é o núcleo de um sistema de ERP (Enterprise Resource Planning) desenvolvido com foco em escalabilidade, segurança e padrões de arquitetura de software de nível corporativo. O objetivo principal foi criar uma API robusta, desacoplada e segura, utilizando as melhores práticas do ecossistema Spring Boot.
 
-🚀 Tecnologias e Ferramentas
+Tecnologias e Ferramentas
 Java 17+
 
 Spring Boot 3
@@ -16,7 +16,7 @@ Lombok (Redução de boilerplate)
 
 PostgreSQL (Banco de dados relacional)
 
-🛠 Principais diferenciais técnicos
+Principais diferenciais técnicos
 O projeto foi construído priorizando a manutenibilidade e a segurança dos dados:
 
 Arquitetura em Camadas: Separação clara de responsabilidades entre Controllers, Services e Repositories, facilitando a manutenção e testes.
@@ -31,7 +31,7 @@ Paginação e Performance: Utilização de Pageable para garantir que grandes vo
 
 Validação de Dados: Uso de Bean Validation (@Valid, @NotBlank, @Min) para garantir a integridade dos dados antes mesmo de chegarem à camada de serviço.
 
-📂 Estrutura do Projeto
+Estrutura do Projeto
 Plaintext
 src/main/java/br/com/erp/gestao/
 ├── config/          # Configurações de Segurança
@@ -41,7 +41,7 @@ src/main/java/br/com/erp/gestao/
 ├── model/           # Entidades do Banco de Dados
 ├── repository/      # Interface de acesso ao BD
 └── service/         # Regras de Negócio
-📋 Como executar
+Como executar
 Clone o repositório.
 
 Certifique-se de ter o PostgreSQL rodando.
