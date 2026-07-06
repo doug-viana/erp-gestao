@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VendaRepository extends JpaRepository<Venda, Long> {
-    // O Spring Data JPA já cria automaticamente métodos como:
-    // save(), findById(), findAll(), deleteById(), etc.
+
 }

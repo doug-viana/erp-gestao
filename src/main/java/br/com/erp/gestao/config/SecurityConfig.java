@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable()) // Desabilita CSRF
                 .authorizeHttpRequests(auth -> auth
-                        // ESTA LINHA É O SEGREDO: ela diz que qualquer um logado passa
+
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults()); // Usa login e senha

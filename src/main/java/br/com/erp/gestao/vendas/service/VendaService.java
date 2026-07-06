@@ -27,7 +27,7 @@ public class VendaService {
         Produto produto = produtoRepository.findById(produtoId)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado!"));
 
-        // Lógica de negócio: baixa no estoque e depois registra a venda
+
         estoqueService.darBaixa(produto.getId(), quantidade);
 
         Venda venda = new Venda();

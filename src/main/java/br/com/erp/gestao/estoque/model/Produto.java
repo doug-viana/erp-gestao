@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "produtos")
 @Data
-@NoArgsConstructor // <<-- ISSO resolve o erro do "new Produto()"
+@NoArgsConstructor
 @AllArgsConstructor
 public class Produto {
 
